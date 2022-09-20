@@ -3,15 +3,15 @@ import streamlit as st
 import joblib
 from PIL import Image
 
-image3 = Image.open('https://raw.githubusercontent.com/Niklewa/Diabetes_pima_indians/main/to_app/sugar-blood-level.png')
-image4 = Image.open('diabetes.png')
+#image3 = Image.open('https://raw.githubusercontent.com/Niklewa/Diabetes_pima_indians/main/to_app/sugar-blood-level.png')
+#image4 = Image.open('diabetes.png')
 # streamlit run streamlit_fhs.py
 # cd C:\Users\nikod\PycharmProjects\scientificProject\to_app
 
 st.write('''<center><p><span style="font-size:38px","font-family:'Times New Roman'">
          <strong>Diabetes Predictor</strong></p></center>''',
 		 unsafe_allow_html=True )
-
+'''
 col11, col12, col13, col14, col15 = st.columns(5)
 with col11:
     st.write("#")
@@ -23,7 +23,7 @@ with col14:
      st.write("#")
 with col15:
      st.write("#")
-
+'''
 st.write("#")
 st.write("#")
 
@@ -46,20 +46,20 @@ model = joblib.load('lr_diab_model.pkl')
 prediction = model.predict(df_pred)
 
 st.write("#")
-image1 = Image.open('checked.png')
-image2 = Image.open('alarm.png')
+#image1 = Image.open('checked.png')
+#image2 = Image.open('alarm.png')
 
 if st.button('Predict'):
 
     if(prediction[0]==0):
         st.write('''<p><span style="font-size:24px">You most likely do not have diabetes</span></p>
        ''', unsafe_allow_html=True)
-        st.image(image1, width=100)
+     #   st.image(image1, width=100)
 
 
     else:
         st.write('<p><span style="font-size:24px">You most likely have diabetes, please consult with a specialist</span></p>', unsafe_allow_html=True)
-        st.image(image2, width=100)
+      #  st.image(image2, width=100)
 
 st.write("#")
 st.write("#")

@@ -3,7 +3,7 @@ import streamlit as st
 import joblib
 from PIL import Image
 
-image3 = Image.open('/to_app/sugar-blood-level.png')
+image3 = Image.open('https://raw.githubusercontent.com/Niklewa/Diabetes_pima_indians/raw/main/to_app/sugar-blood-level.png')
 image4 = Image.open('diabetes.png')
 # streamlit run streamlit_fhs.py
 # cd C:\Users\nikod\PycharmProjects\scientificProject\to_app

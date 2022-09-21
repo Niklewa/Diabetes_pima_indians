@@ -3,8 +3,7 @@ import streamlit as st
 import joblib
 from PIL import Image
 
-image3 = Image.open('sugar-blood-level.png')
-image4 = Image.open('diabetes.png')
+#image4 = Image.open('diabetes.png')
 # streamlit run streamlit_fhs.py
 # cd C:\Users\nikod\PycharmProjects\scientificProject\to_app
 
@@ -16,7 +15,7 @@ col11, col12, col13, col14, col15 = st.columns(5)
 with col11:
     st.write("#")
 with col13:
-    st.image(image4, width=100)
+    st.image('to_app/diabetes.png', width=100)
 with col12:
      st.write("#")
 with col14:

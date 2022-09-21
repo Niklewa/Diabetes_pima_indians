@@ -41,7 +41,7 @@ Age = col4.number_input('Age', min_value=0, max_value=150, step=1)
 df_pred = pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]],
                        columns=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'])
 
-model = joblib.load('lr_diab_model.pkl')
+model = joblib.load('to_app/lr_diab_model.pkl')
 prediction = model.predict(df_pred)
 
 st.write("#")

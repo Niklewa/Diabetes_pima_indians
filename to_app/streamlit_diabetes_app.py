@@ -1,9 +1,9 @@
 import pandas as pd
 import streamlit as st
 import joblib
-from PIL import Image
 
-#image4 = Image.open('diabetes.png')
+
+
 # streamlit run streamlit_fhs.py
 # cd C:\Users\nikod\PycharmProjects\scientificProject\to_app
 
@@ -45,20 +45,19 @@ model = joblib.load('lr_diab_model.pkl')
 prediction = model.predict(df_pred)
 
 st.write("#")
-image1 = Image.open('checked.png')
-image2 = Image.open('alarm.png')
+
 
 if st.button('Predict'):
 
     if(prediction[0]==0):
         st.write('''<p><span style="font-size:24px">You most likely do not have diabetes</span></p>
        ''', unsafe_allow_html=True)
-        st.image(image1, width=100)
+        st.image('to_app/checked.png', width=100)
 
 
     else:
         st.write('<p><span style="font-size:24px">You most likely have diabetes, please consult with a specialist</span></p>', unsafe_allow_html=True)
-        st.image(image2, width=100)
+        st.image('to_app/alarm.png', width=100)
 
 st.write("#")
 st.write("#")
